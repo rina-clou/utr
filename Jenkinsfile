@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    trigger {
+    triggers {
         pollSCM '* * * * *'
     }
     tools {
@@ -12,7 +12,7 @@ pipeline {
             sh 'mvn clean'
             sh 'mvn install'
             sh 'mvn package'
-            sh 'test'
+            
                 
             }
         }
